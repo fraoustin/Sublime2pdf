@@ -1,0 +1,69 @@
+[
+    {
+        "caption": "ToPdf",
+        "command": "to_pdf"
+    },
+    {
+        "caption": "Preferences: 2pdf Settings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/2pdf/2pdf.sublime-settings"
+        }
+    },
+    {
+        "caption": "Preferences: 2pdf Settings – User",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/User/2pdf.sublime-settings"
+        }
+    },
+    {
+        "caption": "Preferences: 2pdf Key Bindings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/2pdf/Default (Windows).sublime-keymap",
+            "platform": "Windows"
+        }
+    },
+    {
+        "caption": "Preferences: 2pdf Key Bindings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/2pdf/Default (OSX).sublime-keymap",
+            "platform": "OSX"
+        }
+    },
+    {
+        "caption": "Preferences: 2pdf Key Bindings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/2pdf/Default (Linux).sublime-keymap",
+            "platform": "Linux"
+        }
+    },
+    {
+        "caption": "Preferences: 2pdf Key Bindings – User",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/User/Default (Windows).sublime-keymap",
+            "platform": "Windows"
+        }
+    },
+    {
+        "caption": "Preferences: 2pdf Key Bindings – User",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/User/Default (OSX).sublime-keymap",
+            "platform": "OSX"
+        }
+    },
+    {
+        "caption": "Preferences: 2pdf Key Bindings – User",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/User/Default (Linux).sublime-keymap",
+            "platform": "Linux"
+        }
+    }
+]
+

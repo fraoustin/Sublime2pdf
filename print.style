@@ -1,0 +1,66 @@
+  pageSetup:
+    size: A4
+    width: null
+    height: null
+    margin-top: 5mm
+    margin-bottom: 5mm
+    margin-left: 5mm
+    margin-right: 5mm
+    margin-gutter: 0cm
+    spacing-header: 5mm
+    spacing-footer: 5mm
+
+  pageTemplates:
+
+    oneColumn:
+        frames: []
+            [0cm, 0cm, 100%, 100%]
+        showHeader : true
+        showFooter : true
+        defaultFooter : """
+.. class:: headertable
+
++---------------------+-----------------------------+
+|.. class:: left      |.. class:: right             |
+|                     |                             |
+|                     |     ###Page###/###Total###  |
++---------------------+-----------------------------+"""
+        defaultHeader : ""
+      #background : note.svg
+
+  styles:
+    left:
+      parent: bodytext
+      alignement: left
+
+    centerd:
+      parent: bodytext
+      alignement: center
+      
+    right:
+      parent: bodytext
+      alignement: right
+      
+    headertable:
+      parent: table
+      colWidths: [80%, 20%]
+      commands : []
+
+    notetable:
+      parent: table
+      colWidths: [10%, 90%]
+      commands : []
+             [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ] 
+             [ROWBACKGROUNDS, [0, 0], [-1, -1], [aliceblue]]
+
+    code:
+      parent: literal
+      fontName: stdMono
+      leftIndent: 0
+      spaceBefore: 8
+      spaceAfter: 8
+      backColor: white
+      borderColor: white
+      borderWidth: 0.2
+      borderPadding: 6
+      fontSize: 10

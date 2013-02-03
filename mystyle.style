@@ -1,0 +1,137 @@
+  pageSetup:
+    size: A4
+    width: null
+    height: null
+    margin-top: 5mm
+    margin-bottom: 5mm
+    margin-left: 5mm
+    margin-right: 5mm
+    margin-gutter: 0cm
+    spacing-header: 5mm
+    spacing-footer: 5mm
+
+  pageTemplates:
+
+    oneColumn:
+        frames: []
+            [0cm, 0cm, 100%, 100%]
+        showHeader : true
+        showFooter : true
+        defaultFooter : """
+.. class:: headertable
+
++---------------------+-----------------------------+
+|.. class:: left      |.. class:: right             |
+|                     |                             |
+|###Title###          |Page ###Page###/###Total###  |
++---------------------+-----------------------------+"""
+        defaultHeader : ""
+      #background : note.svg
+
+  styles:
+    left:
+      parent: bodytext
+      alignement: left
+
+    centerd:
+      parent: bodytext
+      alignement: center
+      
+    right:
+      parent: bodytext
+      alignement: right
+      
+    headertable:
+      parent: table
+      colWidths: [80%, 20%]
+      commands : []
+
+    notetable:
+      parent: table
+      colWidths: [10%, 90%]
+      commands : []
+             [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ] 
+             [ROWBACKGROUNDS, [0, 0], [-1, -1], [aliceblue]]
+
+    base:
+      parent: null
+      fontName: stdFont
+      fontSize: 12
+      leading: 14
+      leftIndent: 0
+      rightIndent: 0
+      firstLineIndent: 0
+      alignment: TA_LEFT
+      spaceBefore: 0
+      spaceAfter: 0
+      bulletFontName: stdFont
+      bulletFontSize: 12
+      bulletIndent: 0
+      textColor: black
+      backColor: null
+      wordWrap: null
+      borderWidth: 0
+      borderPadding: 0
+      borderColor: null
+      borderRadius: null
+      allowWidows: false
+      allowOrphans: false
+      hyphenation: false
+      kerning: false
+      underline: false
+      strike: false
+      commands: []
+
+    heading1:
+      parent: heading
+      fontName: stdBold
+      fontSize: 175%
+      textColor: gray
+      underline: 1
+
+    heading2:
+      parent: heading
+      fontName: stdBold
+      fontSize: 150%
+      textColor: lightgrey
+      underline: 1
+
+    note:
+      parent: admonition
+      textColor: red
+      borderColor: aliceblue
+      backColor: aliceblue
+      borderRadius: 1
+
+    note-heading:
+      parent: admonition-heading
+      textColor: navy
+
+    table-heading:
+      textColor : black
+      backColor : lightgrey
+      alignment : TA_CENTER
+      valign : BOTTOM
+      borderPadding : 0
+
+    table:
+      spaceBefore:6
+      spaceAfter:0
+      alignment: TA_CENTER
+      commands: []
+             [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ]
+             [INNERGRID, [ 0, 0 ], [ -1, -1 ], 0.25, white ]
+             [ROWBACKGROUNDS, [0, 0], [-1, -1], [white]]
+             [BOX, [ 0, 0 ], [ -1, -1 ], 0.25, black ]
+
+    code:
+      parent: literal
+      fontName: stdMono
+      leftIndent: 0
+      spaceBefore: 8
+      spaceAfter: 8
+      backColor: white
+      borderColor: darkgray
+      borderWidth: 0.2
+      borderPadding: 6
+      fontSize: 12
