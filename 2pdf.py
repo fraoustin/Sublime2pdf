@@ -24,6 +24,7 @@ import tempfile
 import zipfile
 import glob
 import shutil
+import traceback
 
 import sublime
 import sublime_plugin
@@ -124,7 +125,9 @@ class ToPdfCommand(sublime_plugin.TextCommand):
                 s = view.substr(alltextreg)
                 s = self._run(s, syntax, encoding, ext, stylesheet_code, stylesheet_rst)
         except Exception as e:
-            sublime.error_message(str(e))
+            exc_type, exc_value, exc_traceback = sys.exc_info()
+            formatted_lines = traceback.format_exc().splitlines()
+            sublime.error_message(str(' '.join(formatted_lines)))
 
     def _run(self, s, syntax=None, encoding="utf-8", ext="", stylesheet_code=None, stylesheet_rst=None):
         try:
