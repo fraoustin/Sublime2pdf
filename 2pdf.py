@@ -25,6 +25,7 @@ import zipfile
 import glob
 import shutil
 import traceback
+import subprocess
 
 import sublime
 import sublime_plugin
@@ -165,7 +166,12 @@ class ToPdfCommand(sublime_plugin.TextCommand):
                                     source_path=infile.name,
                                     output=outfile,
                                     compressed=self.settings.get('compressed'))
-        os.startfile(outfile)
+        if sys.platform.startswith('darwin'):
+            subprocess.call(('open', outfile))
+        elif os.name == 'nt':
+            os.startfile(outfile)
+        elif os.name == 'posix':
+            subprocess.call(('xdg-open', outfile))
         infile.close()
         os.remove(temp.name)
         #sublime.message_dialog(stylesheet)
